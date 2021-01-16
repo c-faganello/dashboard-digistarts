@@ -1,0 +1,27 @@
+<mdb-card style="margin-top: 15px;">
+
+    <mdb-card-body>
+        <h4>
+            <mdb-icon fas icon="tasks"></mdb-icon> Lista de tarefas</h4>
+        <table mdbTable hover="true">
+            <thead>
+                <tr>
+                    <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr mdbTableCol *ngFor="let el of elements">
+                    <th scope="row">{{el.id}}</th>
+                    <td>{{el.descricao}}</td>
+                    <td>
+                        <span [style.background]="el.color" class="status">
+                        {{el.status}}
+                       </span>
+
+                    </td>
+                    <td>{{el.programado}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </mdb-card-body>
+</mdb-card>

@@ -1,0 +1,9 @@
+<mdb-card>
+
+    <mdb-card-body>
+        <h4>
+            <mdb-icon fas icon="chart-line"></mdb-icon> Tarefas - evolução</h4>
+        <canvas height="38hv" width="100" mdbChart [chartType]="chartType" [datasets]="chartDatasets" [labels]="chartLabels" [colors]="chartColors" [options]="chartOptions" [legend]="true" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                    </canvas>
+    </mdb-card-body>
+</mdb-card>

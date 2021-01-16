@@ -1,0 +1,52 @@
+<div>
+
+
+    <input type="checkbox" id="check">
+
+
+    <input type="checkbox" id="check">
+    <div class="menus">
+        <label for="check">
+            <mdb-icon fas icon="bars" id="sidebar_btn"></mdb-icon>
+           
+          </label>
+        <span class="log"> <mdb-icon fas icon="check-double"></mdb-icon> Gestão de tarefas</span>
+
+        <!-- <button routerLink="/login" class="btn btn-primary" label="Sair" pButton icon="pi pi-sign-out">Sair</button> -->
+    </div>
+    <!--sidebar start-->
+    <div class="sidebar">
+        <div class="profile_info">
+            <img src="{{getSrc()}}" class="profile_image" alt="">
+            <h4> Jõao da silva</h4>
+        </div>
+        <a href="#">
+            <mdb-icon fas icon="chart-line"></mdb-icon><span>
+             Dashboard</span></a>
+        <a href="#">
+            <mdb-icon fas icon="tasks"></mdb-icon><span>
+            Lista de tarefas</span></a>
+        <a href="#">
+            <mdb-icon fas icon="folder-plus"></mdb-icon><span>
+            Cadastros</span></a>
+        <a href="#">
+            <mdb-icon fas icon="sign-out-alt"></mdb-icon><span>
+            Sair</span></a>
+        <a href="#">
+            <mdb-icon fas icon="chart-pie"></mdb-icon><span>
+            Relatórios</span></a>
+
+
+    </div>
+    <!--sidebar end-->
+
+
+
+    <div class="content">
+
+
+        <router-outlet></router-outlet>
+
+
+    </div>
+</div>

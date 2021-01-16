@@ -1,0 +1,30 @@
+<div class="row">
+
+    <div class="col-lg-3 col-md-6 col-sm-6 info" *ngFor="let d of dados" [ngStyle]="{'color': getColor(d.realizada)}">
+
+
+
+        <div [style.background]="getColorSnip(d.realizada)" class="card  order-card">
+            <div class="card-block">
+                <h6>{{d.realizada}}</h6>
+
+                <h2 class="text-right">
+
+                    <mdb-icon *ngIf="d.realizada==='ABERTA'" fas class="f-left" icon="exclamation-circle"></mdb-icon>
+                    <mdb-icon *ngIf="d.realizada==='REPROGRAMADA'" class="f-left" fas icon="clock"></mdb-icon>
+                    <mdb-icon *ngIf="d.realizada==='JUSTIFICADA'" class="f-left" fas icon="edit"></mdb-icon>
+                    <mdb-icon *ngIf="d.realizada==='REALIZADA'" class="f-left" fas icon="check-double"></mdb-icon>
+
+
+
+
+
+                    <span class="total" style="color: #fff;">{{d.total}}</span></h2>
+
+                <p class="m-b-0">Total programado<span class="f-right">{{totais}}</span></p>
+            </div>
+        </div>
+
+
+    </div>
+</div>

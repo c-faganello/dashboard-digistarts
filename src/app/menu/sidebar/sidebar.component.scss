@@ -1,0 +1,240 @@
+.menus {
+    /* background-color: #2f323a; */
+    background: #2b3d4f;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    /* background: #22242A; */
+    padding-left: 30px !important;
+    padding-top: 15px;
+    height: 52px;
+    z-index: 999;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.left_area {
+    top: 0px !important;
+}
+
+.left_area h3 {
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.left_area span {
+    color: #19B3D3;
+}
+
+.log {
+    color: #ccc;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.sair {
+    float: right;
+    margin-right: 10px;
+    background-color: #19B3D3 !important;
+    border: none !important;
+}
+
+.sidebar {
+    z-index: 1;
+    top: 0;
+    /* background: #2f323a; */
+    background-color: #34495e;
+    margin-top: 52px;
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    transition: 0.5s;
+    transition-property: left;
+    overflow-y: auto;
+}
+
+.profile_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar .profile_info .profile_image {
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    margin-bottom: 5px;
+}
+
+.sidebar .profile_info h4 {
+    color: #ccc;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.sidebar a {
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 40px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property: background;
+    font-size: 12px;
+}
+
+.sidebar a:hover {
+    background: #19B3D3;
+}
+
+.sidebar i {
+    padding-right: 10px;
+}
+
+#teste {
+    display: none;
+    font-size: 20px;
+    color: #fff;
+    position: fixed;
+    right: 0px;
+    top: 70px;
+}
+
+#sidebar_btn {
+    z-index: 1;
+    color: #fff !important;
+    position: fixed;
+    cursor: pointer;
+    left: 230px;
+    font-size: 20px;
+    /* margin: 5px 0; */
+    top: 16px;
+    transition: 0.5s;
+    transition-property: color;
+}
+
+label #sidebar_btn:hover {
+    color: #19B3D3;
+}
+
+#check:checked~.sidebar {
+    left: -185px;
+}
+
+#check:checked~.sidebar a span {
+    display: none;
+}
+
+#check:checked~.sidebar a {
+    font-size: 20px;
+    margin-left: 165px;
+    width: 100%;
+}
+
+.content {
+    margin-top: 60px;
+    padding: 20px;
+    margin-left: 250px;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    transition: 0.5s;
+}
+
+#check:checked~.content {
+    margin-left: 60px;
+}
+
+#check:checked~.sidebar .profile_info {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.content .card p {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+
+/* Responsive CSS */
+
+@media screen and (max-width: 780px) {
+    #teste {
+        display: block;
+    }
+    .sidebar {
+        display: none;
+    }
+    #sidebar_btn {
+        display: none;
+    }
+    .content {
+        margin-left: 0;
+        margin-top: 0;
+        padding: 10px 20px;
+        transition: 0s;
+    }
+    #check:checked~.content {
+        margin-left: 0;
+    }
+    .nav_bar {
+        background: #222;
+        width: (100% -0%);
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    .nav_bar .nav_btn {
+        color: #fff;
+        font-size: 22px;
+        cursor: pointer;
+        transition: 0.5s;
+        transition-property: color;
+    }
+    .nav_bar .nav_btn:hover {
+        color: #19B3D3;
+    }
+    .active {
+        display: block;
+    }
+}
+
+.link-side {
+    padding: 10px;
+    border-bottom: 1px solid #cacaca;
+    left: 10px;
+    color: #565656;
+    font-size: 12px;
+}
+
+.link-side a {
+    color: #565656;
+    font-size: 9px;
+}
+
+.icon-menu {
+    color: #565656;
+    margin-right: 5px !important;
+}
