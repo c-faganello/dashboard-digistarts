@@ -51,6 +51,7 @@ export class ChartTarefasComponent implements OnInit {
       position: 'bottom',
       fullWidth: true,
       reverse: false,
+      fontSize:10
     }
   };
   public chartClicked(e: any): void { }

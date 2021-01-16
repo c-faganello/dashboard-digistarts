@@ -4,3 +4,12 @@
     border-radius: 10px;
     text-transform: lowercase;
 }
+
+@media screen and (max-width: 780px) {
+    td {
+        display: block !important;
+    }
+    th {
+        display: none;
+    }
+}
